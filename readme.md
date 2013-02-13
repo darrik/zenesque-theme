@@ -10,3 +10,6 @@ Very much a work in progress and might never be finished.
 
 Drop into a folder on your load path and M-x load-theme RET zenesque-dark-colors RET
 
+## Screnshot
+
+![preview](https://raw.github.com/darrik/zenesque-theme/master/preview.png "preview")
