@@ -4,9 +4,9 @@
 ;;
 ;; Author: Rikard Glans (rikard@ecx.se)
 ;; URL: https://github.com/darrik/zenesque-theme
-;; Version: 001
+;; Version: 002
 ;;
-;; Time-stamp: <2013-02-13 17:48:55>
+;; Time-stamp: <2013-02-14 12:49:01>
 ;;
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -21,61 +21,124 @@
 ;; You should have received a copy of the GNU General Public License
 ;; along with this program. If not, see <http://www.gnu.org/licenses/>.
 
+(unless (>= 24 emacs-major-version)
+  (error "zenesque-dark-colors-theme requires Emacs 24 or later."))
+
 (deftheme zenesque-dark-colors
   "Port of Paul L's zenesque dark with colors vim colorscheme.")
 
-(custom-theme-set-faces
- 'zenesque-dark-colors
+(let ((*background*              "#0f1216")
+      (*black*                   "#000000")
+      (*builtin*                 "#a16f51")
+      (*comment*                 "#777777")
+      (*constant*                "#8d5c57")
+      (*directory*               "#525252")
+      (*doc*                     "#5d7a64")
+      (*error*                   "#727272")
+      (*function*                "#9784a2")
+      (*keyword*                 "#737354")
+      (*link*                    "#666666")
+      (*linum*                   "#4d4d44")
+      (*linum-bg*                "#0f1216")
+      (*match-bg*                "#a8a8a8")
+      (*menu*                    "#656565")
+      (*menu-bg*                 "#3f3f3f")
+      (*normal*                  "#adadad")
+      (*paren-match-bg*          "#a8a8a8")
+      (*paren-mismatch-bg*       "#7b3535")
+      (*paren-no-match-bg*       "#c8b8b8")
 
- '(default                          ((t (:foreground "#adadad" :background "#0f1216"))))
+      (*mode-line*               "#000000")
+      (*mode-line-bg*            "#727272")
+      (*mode-line-inactive*      "#5a5959")
+      (*mode-line-inactive-bg*   "#222222")
+      (*powerline-active-1*      "#ffffff")
+      (*powerline-active-1-bg*   "#525252")
+      (*powerline-active-2*      "#adadad")
+      (*powerline-active-2-bg*   "#323232")
+      (*powerline-inactive-1*    "#adadad")
+      (*powerline-inactive-1-bg* "#151515")
+      (*powerline-inactive-2*    "#adadad")
+      (*powerline-inactive-2-bg* "#101010")
 
- '(cursor                           ((t (:foreground "#0f1216" :background "#adadad"))))
- '(dired-directory                  ((t (:foreground "#525252" :background "#0f1216"))))
- '(error                            ((t (:foreground "#727272" :background "#0f1216"))))
- '(hl-line-face                     ((t (:foreground "#adadad" :background "#000000"))))
- '(isearch                          ((t (:foreground "#000000" :background "#c5c3c3"))))
- '(link                             ((t (:foreground "#666666" :background "#0f1216"))))
- '(linum                            ((t (:foreground "#4d4d44" :background "#0f1216"))))
- '(match                            ((t (:foreground "#000000" :background "#a8a8a8" :weight bold))))
- '(menu                             ((t (:foreground "#656565" :background "#3f3f3f"))))
- '(mode-line                        ((t (:foreground "#000000" :background "#adadad"))))
- '(org-todo                         ((t (:foreground "#9b3535" :background "#0f1216"))))
- '(region                           ((t (:foreground "#adadad" :background "#462e44"))))
- '(vertical-border                  ((t (:foreground "#222222" :background "#222222"))))
- '(hl-line                          ((t (:foreground "#adadad" :background "#000000"))))
+      (*preproc*                 "#5567a1")
+      (*rdd-1*                   "#a7a863")
+      (*rdd-2*                   "#979853")
+      (*rdd-3*                   "#878843")
+      (*rdd-4*                   "#777833")
+      (*rdd-5*                   "#676823")
+      (*rdd-6*                   "#575813")
+      (*rdd-7*                   "#474803")
+      (*region-bg*               "#462e44")
+      (*search-bg*               "#c5c3c3")
+      (*string*                  "#5d7a64")
+      (*todo*                    "#9b3535")
+      (*type*                    "#518991")
+      (*vertical-border*         "#222222")
+      (*vertical-border-bg*      "#222222")
+      (*warning*                 "#cfcfcf")
+      (*warning-bg*              "#5b5b5b")
+      (*white*                   "#ffffff"))
 
- '(font-lock-builtin-face           ((t (:foreground "#a16f51" :background "#0f1216"))))
- '(font-lock-comment-delimiter-face ((t (:foreground "#777777" :background "#0f1216"))))
- '(font-lock-comment-face           ((t (:foreground "#777777" :background "#0f1216"))))
- '(font-lock-constant-face          ((t (:foreground "#8d5c57" :background "#0f1216"))))
- '(font-lock-function-name-face     ((t (:foreground "#9784a2" :background "#0f1216"))))
- '(font-lock-keyword-face           ((t (:foreground "#737354" :background "#0f1216"))))
- '(font-lock-preprocessor-face      ((t (:foreground "#5567a1" :background "#0f1216"))))
- '(font-lock-string-face            ((t (:foreground "#5d7a64" :background "#0f1216"))))
- '(font-lock-doc-face               ((t (:foreground "#5d7a64" :background "#0f1216"))))
- '(font-lock-type-face              ((t (:foreground "#518991" :background "#0f1216"))))
- '(font-lock-warning-face           ((t (:foreground "#cfcfcf" :background "#5b5b5b"))))
+  (custom-theme-set-faces
+   'zenesque-dark-colors
 
- '(show-paren-match                 ((t (:foreground "#000000" :background "#a8a8a8" :weight bold))))
- '(show-paren-mismatch              ((t (:foreground "#000000" :background "#7b3535" :weight bold))))
+   `(default                          ((t (:foreground ,*normal* :background ,*background* :weight normal :slant normal :underline nil))))
 
- '(paren-face-match                 ((t (:foreground "#000000" :background "#a8a8a8" :weight bold))))
- '(paren-face-mismatch              ((t (:foreground "#000000" :background "#7b3535" :weight bold))))
- '(paren-face-no-match              ((t (:foreground "#000000" :background "#c8b8b8" :weight bold))))
+   `(cursor                           ((t (:foreground ,*background* :background ,*normal*))))
+   `(dired-directory                  ((t (:foreground ,*directory*))))
+   `(error                            ((t (:foreground ,*error*))))
+   `(hl-line-face                     ((t (:foreground ,*normal* :background ,*black*))))
+   `(isearch                          ((t (:foreground ,*black* :background ,*search-bg*))))
+   `(link                             ((t (:foreground ,*link*))))
+   `(linum                            ((t (:foreground ,*linum* :background ,*linum-bg*))))
+   `(match                            ((t (:foreground ,*black* :background ,*match-bg* :weight bold))))
+   `(menu                             ((t (:foreground ,*menu* :background ,*menu-bg*))))
+   `(mode-line                        ((t (:foreground ,*mode-line* :background ,*mode-line-bg* :weight bold))))
+   `(mode-line-inactive               ((t (:foreground ,*mode-line-inactive* :background ,*mode-line-inactive-bg*))))
+   `(org-todo                         ((t (:foreground ,*todo*))))
+   `(region                           ((t (:foreground ,*normal* :background ,*region-bg*))))
+   `(vertical-border                  ((t (:foreground ,*vertical-border* :background ,*vertical-border-bg*))))
+   `(hl-line                          ((t (:foreground ,*normal* :background ,*black*))))
 
- '(powerline-active1                ((t (:foreground "#ffffff" :background "grey40"  :inherit mode-line))))
- '(powerline-active2                ((t (:foreground "#adadad" :background "grey22"  :inherit mode-line))))
- '(powerline-inactive1              ((t (:foreground "#adadad" :background "#2f3236" :inherit mode-line))))
- '(powerline-inactive2              ((t (:foreground "#adadad" :background "#1e2125" :inherit mode-line))))
+   `(font-lock-builtin-face           ((t (:foreground ,*builtin*))))
+   `(font-lock-comment-delimiter-face ((t (:foreground ,*comment*))))
+   `(font-lock-comment-face           ((t (:foreground ,*comment*))))
+   `(font-lock-constant-face          ((t (:foreground ,*constant*))))
+   `(font-lock-function-name-face     ((t (:foreground ,*function*))))
+   `(font-lock-keyword-face           ((t (:foreground ,*keyword*))))
+   `(font-lock-preprocessor-face      ((t (:foreground ,*preproc*))))
+   `(font-lock-string-face            ((t (:foreground ,*string*))))
+   `(font-lock-doc-face               ((t (:foreground ,*doc*))))
+   `(font-lock-type-face              ((t (:foreground ,*type*))))
+   `(font-lock-warning-face           ((t (:foreground ,*warning* :background ,*warning-bg*))))
 
- '(rainbow-delimiters-depth-1-face  ((t (:foreground "#a7a863" :background "#0f1216"))))
- '(rainbow-delimiters-depth-2-face  ((t (:foreground "#979853" :background "#0f1216"))))
- '(rainbow-delimiters-depth-3-face  ((t (:foreground "#878843" :background "#0f1216"))))
- '(rainbow-delimiters-depth-4-face  ((t (:foreground "#777833" :background "#0f1216"))))
- '(rainbow-delimiters-depth-5-face  ((t (:foreground "#676823" :background "#0f1216"))))
- '(rainbow-delimiters-depth-6-face  ((t (:foreground "#575813" :background "#0f1216"))))
- '(rainbow-delimiters-depth-7-face  ((t (:foreground "#474803" :background "#0f1216"))))
- )
+   `(show-paren-match                 ((t (:foreground ,*black* :background ,*paren-match-bg* :weight bold))))
+   `(show-paren-mismatch              ((t (:foreground ,*black* :background ,*paren-mismatch-bg* :weight bold))))
+
+   `(paren-face-match                 ((t (:foreground ,*black* :background ,*paren-match-bg* :weight bold))))
+   `(paren-face-mismatch              ((t (:foreground ,*black* :background ,*paren-mismatch-bg* :weight bold))))
+   `(paren-face-no-match              ((t (:foreground ,*black* :background ,*paren-no-match-bg* :weight bold))))
+
+   `(powerline-active1                ((t (:foreground ,*powerline-active-1* :background ,*powerline-active-1-bg* :inherit mode-line))))
+   `(powerline-active2                ((t (:foreground ,*powerline-active-2* :background ,*powerline-active-2-bg* :inherit mode-line))))
+   `(powerline-inactive1              ((t (:foreground ,*powerline-inactive-1* :background ,*powerline-inactive-1-bg* :inherit mode-line))))
+   `(powerline-inactive2              ((t (:foreground ,*powerline-inactive-2* :background ,*powerline-inactive-2-bg* :inherit mode-line))))
+
+   `(rainbow-delimiters-depth-1-face  ((t (:foreground ,*rdd-1*))))
+   `(rainbow-delimiters-depth-2-face  ((t (:foreground ,*rdd-2*))))
+   `(rainbow-delimiters-depth-3-face  ((t (:foreground ,*rdd-3*))))
+   `(rainbow-delimiters-depth-4-face  ((t (:foreground ,*rdd-4*))))
+   `(rainbow-delimiters-depth-5-face  ((t (:foreground ,*rdd-5*))))
+   `(rainbow-delimiters-depth-6-face  ((t (:foreground ,*rdd-6*))))
+   `(rainbow-delimiters-depth-7-face  ((t (:foreground ,*rdd-7*))))
+
+   ))
+
+;;;###autoload
+(when load-file-name
+  (add-to-list 'custom-theme-load-path
+               (file-name-as-directory (file-name-directory load-file-name))))
 
 (provide-theme 'zenesque-dark-colors)
 
