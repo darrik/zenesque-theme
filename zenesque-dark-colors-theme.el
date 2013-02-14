@@ -4,9 +4,9 @@
 ;;
 ;; Author: Rikard Glans (rikard@ecx.se)
 ;; URL: https://github.com/darrik/zenesque-theme
-;; Version: 003
+;; Version: 004
 ;;
-;; Time-stamp: <2013-02-14 21:05:11>
+;; Time-stamp: <2013-02-14 22:36:48>
 ;;
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -35,7 +35,9 @@
       (*directory*               "#525252")
       (*doc*                     "#4d6a54")
       (*error*                   "#727272")
+      (*fringe*                  "#0f1216")
       (*function*                "#9784a2")
+      (*header-line*             "#0f1216")
       (*keyword*                 "#737354")
       (*link*                    "#666666")
       (*linum*                   "#4d4d44")
@@ -94,6 +96,8 @@
    `(cursor                           ((t (:foreground ,*background* :background ,*normal*))))
    `(dired-directory                  ((t (:foreground ,*directory*))))
    `(error                            ((t (:foreground ,*error*))))
+   `(fringe                           ((t (:foreground ,*normal* :background ,*fringe*))))
+   `(header-line                      ((t (:foreground ,*normal* :background ,*header-line*))))
    `(hl-line-face                     ((t (:foreground ,*normal* :background ,*black*))))
    `(isearch                          ((t (:foreground ,*black* :background ,*search-bg*))))
    `(link                             ((t (:foreground ,*link*))))
