@@ -4,9 +4,9 @@
 ;;
 ;; Author: Rikard Glans (rikard@ecx.se)
 ;; URL: https://github.com/darrik/zenesque-theme
-;; Version: 004
+;; Version: 004.1
 ;;
-;; Time-stamp: <2013-02-14 22:36:48>
+;; Time-stamp: <2013-02-14 22:39:18>
 ;;
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -98,7 +98,7 @@
    `(error                            ((t (:foreground ,*error*))))
    `(fringe                           ((t (:foreground ,*normal* :background ,*fringe*))))
    `(header-line                      ((t (:foreground ,*normal* :background ,*header-line*))))
-   `(hl-line-face                     ((t (:foreground ,*normal* :background ,*black*))))
+   `(hl-line                          ((t (:foreground ,*normal* :background ,*black*))))
    `(isearch                          ((t (:foreground ,*black* :background ,*search-bg*))))
    `(link                             ((t (:foreground ,*link*))))
    `(linum                            ((t (:foreground ,*linum* :background ,*linum-bg*))))
@@ -107,7 +107,6 @@
    `(org-todo                         ((t (:foreground ,*todo*))))
    `(region                           ((t (:foreground ,*normal* :background ,*region-bg*))))
    `(vertical-border                  ((t (:foreground ,*vertical-border* :background ,*vertical-border-bg*))))
-   `(hl-line                          ((t (:foreground ,*normal* :background ,*black*))))
 
    `(font-lock-builtin-face           ((t (:foreground ,*builtin*))))
    `(font-lock-comment-delimiter-face ((t (:foreground ,*comment*))))
