@@ -4,9 +4,9 @@
 ;;
 ;; Author: Rikard Glans (rikard@ecx.se)
 ;; URL: https://github.com/darrik/zenesque-theme
-;; Version: 004.1
+;; Version: 005
 ;;
-;; Time-stamp: <2013-02-14 22:39:18>
+;; Time-stamp: <2013-02-19 16:00:15>
 ;;
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -104,7 +104,6 @@
    `(linum                            ((t (:foreground ,*linum* :background ,*linum-bg*))))
    `(match                            ((t (:foreground ,*black* :background ,*match-bg* :weight bold))))
    `(menu                             ((t (:foreground ,*menu* :background ,*menu-bg*))))
-   `(org-todo                         ((t (:foreground ,*todo*))))
    `(region                           ((t (:foreground ,*normal* :background ,*region-bg*))))
    `(vertical-border                  ((t (:foreground ,*vertical-border* :background ,*vertical-border-bg*))))
 
@@ -131,11 +130,13 @@
    `(mode-line                        ((t (:foreground ,*mode-line* :background ,*mode-line-bg* :weight bold))))
    `(mode-line-inactive               ((t (:foreground ,*mode-line-inactive* :background ,*mode-line-inactive-bg*))))
 
+   ;; powerline
    `(powerline-active1                ((t (:foreground ,*powerline-active-1* :background ,*powerline-active-1-bg* :inherit mode-line))))
    `(powerline-active2                ((t (:foreground ,*powerline-active-2* :background ,*powerline-active-2-bg* :inherit mode-line))))
    `(powerline-inactive1              ((t (:foreground ,*powerline-inactive-1* :background ,*powerline-inactive-1-bg* :inherit mode-line))))
    `(powerline-inactive2              ((t (:foreground ,*powerline-inactive-2* :background ,*powerline-inactive-2-bg* :inherit mode-line))))
 
+   ;; rainbow delimiters mode
    `(rainbow-delimiters-depth-1-face  ((t (:foreground ,*rdd-1*))))
    `(rainbow-delimiters-depth-2-face  ((t (:foreground ,*rdd-2*))))
    `(rainbow-delimiters-depth-3-face  ((t (:foreground ,*rdd-3*))))
@@ -144,9 +145,35 @@
    `(rainbow-delimiters-depth-6-face  ((t (:foreground ,*rdd-6*))))
    `(rainbow-delimiters-depth-7-face  ((t (:foreground ,*rdd-7*))))
 
+   ;; cperl-mode
    `(cperl-array-face                 ((t (:foreground ,*variable* :underline t))))
    `(cperl-hash-face                  ((t (:foreground ,*variable* :underline t :weight bold))))
    `(cperl-nonoverridable-face        ((t (:foreground ,*function*))))
+
+   ;; M-x customize-*
+   `(custom-variable-tag              ((t (:foreground ,*function*))))
+   `(custom-documentation             ((t (:foreground ,*doc*))))
+   `(custom-visibility                ((t (:foreground ,*keyword*))))
+   `(custom-button                    ((t (:foreground ,*builtin*))))
+   `(custom-state                     ((t (:foreground ,*constant*))))
+   `(widget-field                     ((t (:foreground ,*preproc*))))
+
+   ;; org-mode
+   `(org-document-info-keyword        ((t (:foreground ,*keyword*))))
+   `(org-document-title               ((t (:foreground ,*string*))))
+   `(org-level-1                      ((t (:foreground ,*rdd-1*))))
+   `(org-level-2                      ((t (:foreground ,*rdd-3*))))
+   `(org-level-3                      ((t (:foreground ,*rdd-5*))))
+   `(org-level-4                      ((t (:foreground ,*rdd-7*))))
+   `(org-date                         ((t (:foreground ,*constant*))))
+   `(org-done                         ((t (:foreground ,*string*))))
+   `(org-todo                         ((t (:foreground ,*todo*))))
+   `(org-special-keyword              ((t (:foreground ,*keyword*))))
+   `(org-property-value               ((t (:foreground ,*builtin*))))
+   `(org-tag                          ((t (:foreground ,*function*))))
+   `(org-meta-line                    ((t (:foreground ,*rdd-2*))))
+   `(org-table                        ((t (:foreground ,*rdd-4*))))
+   `(org-link                         ((t (:foreground ,*link*))))
 
    ))
 
