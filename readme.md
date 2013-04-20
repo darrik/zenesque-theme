@@ -8,4 +8,6 @@ Drop into a folder on your load path and M-x load-theme RET zenesque-dark-colors
 
 ## Screenshot
 
-![preview](https://raw.github.com/darrik/zenesque-theme/master/preview.png "preview")
+![lisp preview](https://raw.github.com/darrik/zenesque-theme/master/previews/p_lisp.png "LISP preview")
+![c preview](https://raw.github.com/darrik/zenesque-theme/master/previews/p_c.png "C preview")
+![ruby preview](https://raw.github.com/darrik/zenesque-theme/master/previews/p_ruby.png "Ruby preview")

@@ -4,9 +4,9 @@
 ;;
 ;; Author: Rikard Glans (rikard@ecx.se)
 ;; URL: https://github.com/darrik/zenesque-theme
-;; Version: 006
+;; Version: 007
 ;;
-;; Time-stamp: <2013-02-19 20:07:50>
+;; Time-stamp: <2013-04-20 21:27:14>
 ;;
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
