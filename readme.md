@@ -1,10 +1,6 @@
 # Zenesque dark with colors
 
-My port of Paul L's [zenesque](http://www.vim.org/scripts/script.php?script_id=3340) dark with colors colorscheme for vim.
-
-## Notes
-
-Very much a work in progress and might never be finished.
+My port of Paul L's [zenesque](http://www.vim.org/scripts/script.php?script_id=3340) dark with colors vim color scheme.
 
 ## Installation
 

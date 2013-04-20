@@ -4,9 +4,9 @@
 ;;
 ;; Author: Rikard Glans (rikard@ecx.se)
 ;; URL: https://github.com/darrik/zenesque-theme
-;; Version: 005
+;; Version: 006
 ;;
-;; Time-stamp: <2013-02-19 16:00:15>
+;; Time-stamp: <2013-02-19 20:07:50>
 ;;
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -28,7 +28,6 @@
   "Port of Paul L's zenesque dark (with colors) vim color scheme.")
 
 (let ((*background*              "#0f1216")
-      (*black*                   "#000000")
       (*builtin*                 "#838364")
       (*comment*                 "#777777")
       (*constant*                "#8d5c57")
@@ -57,6 +56,9 @@
       (*vertical-border-bg*      "#222222")
       (*warning*                 "#cfcfcf")
       (*warning-bg*              "#5b5b5b")
+
+      (*black*                   "#000000")
+      (*red*                     "#fb3535")
       (*white*                   "#ffffff")
 
       (*paren-match-bg*          "#a8a8a8")
@@ -174,6 +176,10 @@
    `(org-meta-line                    ((t (:foreground ,*rdd-2*))))
    `(org-table                        ((t (:foreground ,*rdd-4*))))
    `(org-link                         ((t (:foreground ,*link*))))
+
+   ;; ace-jump mode
+   `(ace-jump-face-background         ((t (:background ,*background*))))
+   `(ace-jump-face-foreground         ((t (:foreground ,*red*))))
 
    ))
 
