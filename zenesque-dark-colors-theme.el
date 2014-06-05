@@ -1,12 +1,12 @@
 ;;; zenesque-dark-colors-theme.el
 ;;
-;; Copyright (c) 2013 Rikard Glans
+;; Copyright (c) 2013-2014 Rikard Glans
 ;;
 ;; Author: Rikard Glans (rikard@ecx.se)
 ;; URL: https://github.com/darrik/zenesque-theme
-;; Version: 007
+;; Version: 008
 ;;
-;; Time-stamp: <2013-04-20 21:27:14>
+;; Time-stamp: <2014-06-06 00:36:24>
 ;;
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -106,6 +106,7 @@
    `(linum                            ((t (:foreground ,*linum* :background ,*linum-bg*))))
    `(match                            ((t (:foreground ,*black* :background ,*match-bg* :weight bold))))
    `(menu                             ((t (:foreground ,*menu* :background ,*menu-bg*))))
+   `(minibuffer-prompt                ((t (:foreground ,*normal* :background ,*background*))))
    `(region                           ((t (:foreground ,*normal* :background ,*region-bg*))))
    `(vertical-border                  ((t (:foreground ,*vertical-border* :background ,*vertical-border-bg*))))
 
@@ -180,6 +181,11 @@
    ;; ace-jump mode
    `(ace-jump-face-background         ((t (:background ,*background*))))
    `(ace-jump-face-foreground         ((t (:foreground ,*red*))))
+
+   ;; web-mode
+   `(web-mode-html-tag-face         ((t (:foreground ,*function*))))
+   `(web-mode-html-attr-name-face   ((t (:foreground ,*variable*))))
+   `(web-mode-html-tag-bracket-face ((t (:foreground ,*normal*))))
 
    ))
 
