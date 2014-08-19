@@ -4,9 +4,9 @@
 ;;
 ;; Author: Rikard Glans (rikard@ecx.se)
 ;; URL: https://github.com/darrik/zenesque-theme
-;; Version: 008
+;; Version: 009
 ;;
-;; Time-stamp: <2014-06-06 00:36:24>
+;; Time-stamp: <2014-08-20 00:20:11>
 ;;
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -186,6 +186,12 @@
    `(web-mode-html-tag-face         ((t (:foreground ,*function*))))
    `(web-mode-html-attr-name-face   ((t (:foreground ,*variable*))))
    `(web-mode-html-tag-bracket-face ((t (:foreground ,*normal*))))
+
+   ;; jde-mode
+   `(jde-java-font-lock-package-face   ((t (:foreground ,*constant*))))
+   `(jde-java-font-lock-operator-face  ((t (:foreground ,*builtin*))))
+   `(jde-java-font-lock-public-face    ((t (:foreground ,*builtin*))))
+   `(jde-java-font-lock-modifier-face  ((t (:foreground ,*builtin*))))
 
    ))
 
