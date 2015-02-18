@@ -6,7 +6,7 @@
 ;; URL: https://github.com/darrik/zenesque-theme
 ;; Version: 009
 ;;
-;; Time-stamp: <2014-08-20 00:20:11>
+;; Time-stamp: <2015-02-18 16:05:00>
 ;;
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -21,7 +21,7 @@
 ;; You should have received a copy of the GNU General Public License
 ;; along with this program. If not, see <http://www.gnu.org/licenses/>.
 
-(unless (>= 24 emacs-major-version)
+(unless (>= emacs-major-version 24)
   (error "zenesque-dark-colors-theme requires Emacs 24 or later."))
 
 (deftheme zenesque-dark-colors
